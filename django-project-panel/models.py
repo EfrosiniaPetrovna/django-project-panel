@@ -1,9 +1,4 @@
-import os, logging, sys
-from pprint import pprint
 from django.db import models
-from django.apps import apps
-from django.db import connections
-from django.conf import settings
 
 
 class ProjectPanelModel(models.Model):

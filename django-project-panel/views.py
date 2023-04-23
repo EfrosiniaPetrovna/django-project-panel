@@ -1,17 +1,7 @@
-import logging, os, json, copy
-import time
-from pprint import pprint
+import copy
 from datetime import datetime, timedelta, date
 
-import psutil
-
 from django.utils import timezone
-from django.shortcuts import render, redirect, HttpResponseRedirect, render, get_object_or_404
-from django.template.loader import render_to_string
-from django.contrib import messages
-from django.urls import reverse
-from django.http import HttpResponse, HttpResponseNotFound, FileResponse, JsonResponse
-from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.views import generic
 
