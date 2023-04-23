@@ -12,7 +12,7 @@ requirements = [
 
 setuptools.setup(
 	name="django-project-panel",
-	version="0.0.2",
+	version="0.0.3",
 	author="EfrosiniaPetrovna",
 	author_email="je.to.prace@gmail.com",
 	description="Простая мониторинг-панель проекта (размеры всех таблиц в базе данных, медиа файлов и т.д)",
