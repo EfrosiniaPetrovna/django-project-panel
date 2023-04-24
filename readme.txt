@@ -6,13 +6,15 @@
 1. добавить в
 INSTALLED_APPS = [
 	...
-	'project_panel_app',
+	'django_project_panel',
 ]
 
 2. добавить в urls проекта
-path('project_panel/', include('project_panel_app.urls')),
+path('project_panel/', include('django_project_panel.urls')),
 
-3. выполнить миграции project_panel_app
+3. выполнить миграции django_project_panel
+manage.py makemigrations django_project_panel
+manage.py migrate django_project_panel
 
 ***
 Настройка:
@@ -38,6 +40,8 @@ clean_model - можно перечислить таблицы, для кото�
 	'<алиас базы>.<имя таблицы>': {'filter_field_lt': '<имя поля для фильтрации записей на удаление>'},
 },
 
+ВАЖНО!
+Удаление записей происходит в соответствии с настройками on_delete вашей таблицы в базе
 
 ***
 Права:

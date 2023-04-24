@@ -1,5 +1,10 @@
-{% extends 'base_page.html' %}{% block content %}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
 
     <div class="card">
         <div class="header">Оперативная память</div>
@@ -19,7 +24,7 @@
         </div>
     </div>
 
-    <h6 style="padding: 10px">Файлы</h6>
+    <h4 style="padding: 10px">Файлы</h4>
 
     {% for i in folders_files %}
     <div class="card">
@@ -32,7 +37,7 @@
     {% endfor %}
 
 
-    <h6 style="padding: 10px">Базы данных</h6>
+    <h4 style="padding: 10px">Базы данных</h4>
 
     {% for i in db %}
     <div class="card">
@@ -58,17 +63,13 @@
     </div>
     {% endfor %}
 
-
-
-
-
+</body>
 
 
 <style>
+    html, body {font-family: sans-serif; }
     .card {
         margin: 10px;
-        {#border: 1px solid grey;#}
-        border-radius: 5px;
         background: #f1f7fd;
     }
     .card > .header {
@@ -83,4 +84,4 @@
     }
 </style>
 
-{% endblock %}
+</html>

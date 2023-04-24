@@ -1,6 +1,7 @@
 import copy
 from datetime import datetime, timedelta, date
 
+from django.conf import settings
 from django.utils import timezone
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.views import generic
@@ -10,7 +11,7 @@ from .project_panel import ProjectPanel
 
 
 class Panel(LoginRequiredMixin, PermissionRequiredMixin, generic.TemplateView):
-    permission_required = ['project_panel_app.view_panel']
+    permission_required = ['django_project_panel.view_panel']
     template_name = 'project_panel/panel.html'
     extra_context = {
         'title': 'Мониторинг-панель проекта',
@@ -27,7 +28,7 @@ class Panel(LoginRequiredMixin, PermissionRequiredMixin, generic.TemplateView):
 
 
 class CleanTable(LoginRequiredMixin, PermissionRequiredMixin, generic.TemplateView):
-    permission_required = ['project_panel_app.edit_panel']
+    permission_required = ['django_project_panel.edit_panel']
     template_name = 'project_panel/clean_table.html'
     extra_context = {
         'title': 'Мониторинг-панель проекта',
